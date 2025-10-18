@@ -1,0 +1,12 @@
+---
+ - name: Create a file inside /home/ganesh/ansible/misc-ansible/father
+   hosts: servers
+   become: yes
+   tasks:
+    - name: Create a file
+      ansible.builtin.file:
+       path: /home/ganesh/ansible/ganesh
+       owner: ganesh
+       group: ganesh
+       state: touch
+

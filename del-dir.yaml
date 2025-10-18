@@ -1,0 +1,14 @@
+---
+ - name: Delete a directory
+   hosts: servers
+   become: yes
+   
+   vars:
+    file: son
+    directory: father
+
+   tasks:
+    - name: Delete a directory
+      ansible.builtin.file:
+       path: /home/ganesh/ansible/misc_ansible/{{ directory }}
+       state: absent
